@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Shopping Boxes</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="section-header">
+        <hr class="line">
+        <h2>Bundle & Save</h2>
+        <hr class="line">
+    </div>
+    <div class="box" id="box1" data-price="50" data-discount="10">
+        <div class="info">
+            <span><input type="radio" name="quantity" value="1"> 1 Pair</span>
+        </div>
+        <div class="price-wrapper">
+            <span class="price">$50</span>
+            <span class="discount">10% Off</span>
+        </div>
+        <div class="hover-content">
+            <label>Color 
+                <select>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </label>
+            <label>Size 
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    
+    <div class="box" id="box2" data-price="90" data-discount="15">
+        <div class="info">
+            <span><input type="radio" name="quantity" value="2"> 2 Pairs</span>
+            <span class="popular">Most Popular</span>
+        </div>
+        <div class="price-wrapper">
+            <span class="price">$90</span>
+            <span class="discount">15% Off</span>
+        </div>
+        <div class="hover-content">
+            <label>Color
+                <select>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                </select>
+            </label>
+            <label>Size
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    
+    <div class="box" id="box3" data-price="120" data-discount="20">
+        <div class="info">
+            <span><input type="radio" name="quantity" value="3"> 3 Pairs</span>
+        </div>
+        <div class="price-wrapper">
+            <span class="price">$120</span>
+            <span class="discount">20% Off</span>
+        </div>
+        <div class="hover-content">
+            <label>Color 
+                <select>
+                    <option>Purple</option>
+                    <option>Orange</option>
+                </select>
+            </label>
+            <label>Size
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    
+    <div id="total-price-container">
+        <span>Total Price: </span>
+        <span id="total-price">$0</span>
+    </div>
+
+    <button class="add-to-cart">Add to Cart</button>
+    
+</body>
+</html>

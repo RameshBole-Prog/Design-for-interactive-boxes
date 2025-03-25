@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Styling for "Bundle & Save" with horizontal lines */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px; /* Matches the width of the boxes */
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: green; /* Green text color */
+    font-size: 24px;
+    margin: 0 10px; /* Spacing between text and lines */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.line {
+    flex-grow: 1; /* Expand horizontal lines to fill space */
+    border-top: 1px solid green; /* Horizontal line styling */
+    height: 1px;
+}
+
+
+/* Hover effect for boxes */
+.box:hover {
+    border: 2px solid green; /* Green border */
+    background-color: lightblue; /* Light blue background */
+    min-height: 200px; /* Ensures consistent expansion */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+.box {
+    width: 350px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 15px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 80px;
+}
+
+.box:hover {
+    min-height: 200px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 28px;
+}
+
+.discount {
+    margin-left: auto;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popular {
+    background-color: gold;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-left: 183px;
+}
+
+.discount-below {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+.hover-content {
+    display: flex; /* Arrange content horizontally */
+    width: 100%;
+    gap: 50px;
+    margin-top: 8px;
+    margin-left: 25px;
+}
+
+.hover-content label {
+    display: block; /* Ensures label is above the dropdown */
+    font-weight: bold;
+    text-align: center; /* Center-align the text */
+    margin-bottom: 5px; /* Add space between label and dropdown */
+}
+
+.hover-content select {
+    display: block; /* Keeps dropdown directly below the label */
+    margin: 0 auto; /* Centers the dropdown within its label */
+    width: 80%; /* Adjust the width for consistent size */
+    padding: 5px;
+}
+
+#total-price-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 350px; /* Matches the box width */
+    text-align: center; /* Centers text inside the button */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    gap: 8px;
+    border-radius: 10px; /* Optional: matches box border radius */
+}
+
+.add-to-cart::before {
+    content: "+";
+    font-size: 20px;
+}
