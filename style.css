@@ -29,16 +29,7 @@ body {
     height: 1px;
 }
 
-
-/* Hover effect for boxes */
-.box:hover {
-    border: 2px solid green; /* Green border */
-    background-color: lightblue; /* Light blue background */
-    min-height: 200px; /* Ensures consistent expansion */
-    transition: all 0.3s ease; /* Smooth transition */
-}
-
-
+/* Styling for boxes */
 .box {
     width: 350px;
     padding: 15px;
@@ -48,12 +39,17 @@ body {
     margin: 15px 0;
     text-align: center;
     transition: all 0.3s ease;
-    position: relative;
+    position: relative; /* Ensures child elements are positioned within */
     min-height: 80px;
+    overflow: hidden; /* Hides content outside box boundaries */
 }
 
+/* Hover effect for boxes */
 .box:hover {
-    min-height: 200px;
+    border: 2px solid green; /* Green border */
+    background-color: lightblue; /* Light blue background */
+    min-height: 200px; /* Ensures consistent expansion */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 .info {
@@ -99,12 +95,25 @@ body {
     color: red;
 }
 
+/* Updated hover-content styling */
 .hover-content {
-    display: flex; /* Arrange content horizontally */
-    width: 100%;
-    gap: 50px;
-    margin-top: 8px;
-    margin-left: 25px;
+    opacity: 0; 
+    visibility: hidden;
+    position: absolute; 
+    top: 80px; /* Adjust to fit inside the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.box:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
 }
 
 .hover-content label {
